@@ -38,7 +38,7 @@ if (isset($_SESSION['user']))
 <div id="redir_screen" style="display: none">
 <div class="notification-container-login">
 <div style="display: table-cell; vertical-align: middle; text-align: center">
-<p class="center-message">Compte cree avec succes, redirection dans quelques secondes</p>
+<p class="center-message">Connexion en cours ... </br>Redirection dans quelques secondes</p>
 <img src="imgs/refresh-page-option.svg" class="rotation-refreshimage">
 </div>
 </div>

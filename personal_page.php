@@ -61,7 +61,7 @@ if (!isset($_SESSION['user']))
     <div class="header">
         <h1 class="title">Camagru</h1>
             <button id="test" class="btn-accueil-pp" onclick="redirectIndex()"><span class="fix-skew">Page d'accueil</span></button>
-            <button id="second" class="btn-blue" onclick="editInfo()"><span class="fix-skew">Modifier mon profil</span></button>
+            <button id="lol" class="btn-blue" onclick="editInfo()"><span class="fix-skew">Modifier mon profil</span></button>
             <button id="second" class="btn-red-pp" onclick="destroy_session()"><span class="fix-skew">Se deconnecter</span></button>
     </div>
 </header>

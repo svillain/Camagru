@@ -403,10 +403,8 @@ if (count($_POST) === 1 && isset($_POST['getphoto']))
         $img_array = array_slice($img_array, $start, 10);
         if (isset($_SESSION['user']['iduser'])) {
             foreach ($img_array as $img) : ?>
-                <div class="homepage-logged">  
-                    <div id="cache"></div>
-                    <a href="#cache"><img src="/userphoto/<?= $img['idphoto'] ?>.png"></a>
-                    <div class="popup"><img src="/userphoto/<?= $img['idphoto'] ?>.png"><a href="#">X</a></div>
+                <div class="homepage-logged">
+                    <img src="/userphoto/<?= $img['idphoto'] ?>.png">
                     <div id="<?= $img['idphoto'] ?>">
                         <img src="/imgs/e47a3abfc3c9178e3c0b98f888c6a802.svg" style="width: 30px" onclick="putLike(this)">
                         <p style="display: inline; margin-right: 10%"><?= getLikes($img['idphoto']) ?></p>
@@ -586,9 +584,9 @@ if (count($_POST) === 2 && isset($_SESSION['user']['iduser'], $_POST['idphoto'],
                 if ($result['getmailpref'] == 1) {
                     $fullname = $result['name'] . " " . $result['surname'];
                     $header = 'Content-type: text/html; charset=UTF-8' . "\r\n";
-                    $header .= 'From: <arizzell@student.42.fr>' . "\r\n";
-                    $msg = 'Hello ' . $fullname . '<br>You have just received a new comment to one of your photos';
-                    mail($result['email'], "[NEW COMMENT]", $msg, $header);
+                    $header .= 'From: <svillain@student.42.fr>' . "\r\n";
+                    $msg = 'Coucou ' . $fullname . ' On vient de commenter ta photo !';
+                    mail($result['email'], "[Nouveau Commentaire]", $msg, $header);
                 }
             }
             $query = "SELECT username, comment FROM users, comments, photos WHERE id_photo = ? AND comments.id_user = users.iduser AND comments.id_photo = photos.idphoto order by `date` ASC";

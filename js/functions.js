@@ -585,9 +585,9 @@ function updateInfo() {
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState === 4) {
                 if (xhttp.status === 200)
-                    alert("Data updated!");
+                    alert("Informations mises à jour avec succes");
                 if (xhttp.status === 400)
-                    alert("Error");
+                    alert("Veuillez vérifier vos informations");
             }
         };
     }
